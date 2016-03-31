@@ -8,7 +8,7 @@ The purpose of this API is to have a way to synchronize JSON data types (specifi
 
 # How to use
 
-Once you have a Chainpad instance you can initialize the API and create your collaborative object. Only one object can be associated to a Chainpad instance, but you can have as many sub-object as you want.
+Once you have a Chainpad instance you can initialize the API and create your collaborative object. Only one object can be associated to a Chainpad instance, but you can have as many sub-object as you want and you can create more collaborative objects with several Chainpad instances.
 Here is an example of a collaborative form, with two fields.
 
 ```javascript
@@ -19,7 +19,7 @@ require(['ChainJSON.js'], function(ChainJSON) {
   // "realtime" is now representing the Chainpad object in our example.
 
   // Initialize the API with Chainpad :
-  var RealtimeJSON = ChainJSON.init(realtime);
+  var RealtimeJSON = ChainJSON.create(realtime);
 
   // Create your collaborative object
   var obj = RealtimeJSON.getCollaborativeObject();
